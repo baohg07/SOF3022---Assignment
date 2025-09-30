@@ -8,6 +8,66 @@
     <link rel="stylesheet" href="/css/MainHome.css">
 </head>
 <body>
+    <header>
+<!--        Phần Header Đỏ-->
+        <div class="" id="header-top">
+            <span><a href="">ĐỊA CHỈ HỆ THỐNG SHOWROOM</a></span>
+        </div>
+
+<!--        Phẩn Thông Tin Liên Hệ-->
+        <div class="" id="header-info">
+            <div class="">
+                <span><a th:href="@{https://www.facebook.com/habao.02}" target="_blank">Đặt hàng online: 0389 817 057</a></span>
+                <span>-</span>
+                <span><a href="">CSKH: 1900 988 903</a></span>
+            </div>
+            <div>
+                <span><a href="">ĐỊA CHỈ HỆ THỐNG SHOWROOM</a></span>
+            </div>
+        </div>
+
+<!--        Phần Menu-->
+        <div id="header-menu">
+<!--        Tên Thương Hiệu-->
+            <div class="logo">
+                <span><a th:href="@{/}"><strong>FASHION</strong></a></span>
+            </div>
+
+<!--        Menu Điều Hướng-->
+            <div class="nav">
+                <ul>
+                    <li><a th:href="@{/}">Trang Chủ</a></li>
+                    <li><a href="">Thời Trang Nữ</a></li>
+                    <li><a href="">Thời Trang Nam</a></li>
+                    <li><a href="">Bộ Sưu Tập</a></li>
+                    <li><a href="">Tin Tức</a></li>
+                    <li><a href="">Sản Phẩm Tốt</a></li>
+                </ul>
+            </div>
+
+<!--        Tìm Kiếm / User / Bag-->
+            <div class="actions">
+                <div class="input-group w-auto">
+                    <input type="text" class="form-control" size="10" placeholder="Tìm sản phẩm...">
+                    <span class="input-group-text">
+                        <i class="bi bi-search"></i>
+                    </span>
+                </div>
+
+                <span><a href=""><i class="bi bi-person"></i></a></span>
+                <span>
+                    <a href="" class="position-relative"><i class="bi bi-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="/uploads/ms_banner_img2.jpg" alt="Banner">
+    </div>
+
 
 </body>
 </html>
