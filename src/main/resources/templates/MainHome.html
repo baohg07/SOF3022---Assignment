@@ -56,10 +56,12 @@
 
                 <span><a href=""><i class="bi bi-person"></i></a></span>
                 <span>
-                    <a href="" class="position-relative"><i class="bi bi-cart"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
-                    </a>
-                </span>
+    <a th:href="@{/cart}" class="position-relative"><i class="bi bi-cart"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+              th:text="${cartItems != null ? cartItems.size() : 0}"></span>
+    </a>
+</span>
+
             </div>
         </div>
     </header>
