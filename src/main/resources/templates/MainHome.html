@@ -11,15 +11,14 @@
 <body>
 <header>
     <!--Phần Header Đỏ-->
-    <div class="" id="header-top">
+    <div id="header-top">
         <span><a href="">ĐỊA CHỈ HỆ THỐNG SHOWROOM</a></span>
     </div>
 
-    <!--Phẩn Thông Tin Liên Hệ-->
-    <div class="" id="header-info">
-        <div class="">
-            <span><a th:href="@{https://www.facebook.com/habao.02}"
-                     target="_blank">Đặt hàng online: 0389 817 057</a></span>
+    <!--Phần Thông Tin Liên Hệ-->
+    <div id="header-info">
+        <div>
+            <span><a th:href="@{https://www.facebook.com/habao.02}" target="_blank">Đặt hàng online: 0389 817 057</a></span>
             <span>-</span>
             <span><a href="">CSKH: 1900 988 903</a></span>
         </div>
@@ -52,16 +51,16 @@
             <div class="input-group w-auto">
                 <input type="text" class="form-control" size="10" placeholder="Tìm sản phẩm...">
                 <span class="input-group-text">
-                        <i class="bi bi-search"></i>
-                    </span>
+                    <i class="bi bi-search"></i>
+                </span>
             </div>
 
             <span><a href=""><i class="bi bi-person"></i></a></span>
             <span>
-                    <a href="" class="position-relative"><i class="bi bi-cart"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
-                    </a>
-                </span>
+                <a href="" class="position-relative"><i class="bi bi-cart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
+                </a>
+            </span>
         </div>
     </div>
 </header>
@@ -69,10 +68,8 @@
 <!--Banner-->
 <div class="banner">
     <img id="banner-img" src="/uploads/ms_banner_img2.jpg" alt="Banner">
-    <button onclick="prevImages()" id="banner-btn-prev"><strong><i class="bi bi-chevron-compact-left"></i></strong>
-    </button>
-    <button onclick="nextImages()" id="banner-btn-next"><strong><i class="bi bi-chevron-compact-right"></i></strong>
-    </button>
+    <button onclick="prevImages()" id="banner-btn-prev"><strong><i class="bi bi-chevron-compact-left"></i></strong></button>
+    <button onclick="nextImages()" id="banner-btn-next"><strong><i class="bi bi-chevron-compact-right"></i></strong></button>
 </div>
 
 <!--Body-1-->
@@ -87,11 +84,9 @@
     </div>
     <!--Body-1 Images-->
     <div class="Body-1-Images">
-        <!--Body-1 Images-left-->
         <div>
             <img src="/uploads/ms_banner_img3.jpg" alt="">
         </div>
-        <!--Body-1 Images-left-->
         <div>
             <img src="/uploads/ms_banner_img4.jpg" alt="">
         </div>
@@ -185,6 +180,4 @@
         </div>
     </div>
 </div>
-</body>
-<script src="/js/MainHome.js"></script>
-</html>
+

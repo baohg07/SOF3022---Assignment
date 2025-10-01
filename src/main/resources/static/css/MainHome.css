@@ -19,6 +19,9 @@
     padding: 8px 25px;
     font-size: 14px;
     border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #header-info > div {
@@ -29,12 +32,6 @@
 #header-info a {
     text-decoration: none;
     color: #000;
-}
-
-#header-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 #header-menu {
@@ -99,12 +96,6 @@
     overflow: hidden;
 }
 
-/*.banner img {*/
-/*    width: 100%;*/
-/*    height: 100%;         !* ép ảnh fill đầy *!*/
-/*    object-fit: cover;    !* cắt ảnh vừa khung, không méo *!*/
-/*}*/
-
 .banner img {
     height: 700px;
     width: 100%;
@@ -144,11 +135,11 @@
 
 .Body-1-Title {
     display: flex;
-    flex-direction: column; /* sắp xếp dọc */
-    align-items: center; /* căn giữa ngang */
-    justify-content: center; /* căn giữa dọc nếu cần */
-    text-align: center; /* chữ trong h2 vào giữa */
-    margin: 20px auto; /* canh giữa theo chiều ngang */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
 }
 
 .Body-1-Title a {
@@ -158,14 +149,14 @@
 
 .Body-1-Images {
     display: flex;
-    justify-content: center; /* căn giữa cụm ảnh */
-    gap: 20px; /* khoảng cách giữa 2 ảnh */
+    justify-content: center;
+    gap: 20px;
 }
 
 .Body-1-Images img {
-    width: 923px; /* chiều rộng cố định */
-    height: 520px; /* chiều cao cố định */
-    object-fit: cover; /* giữ tỉ lệ, cắt ảnh nếu cần */
+    width: 923px;
+    height: 520px;
+    object-fit: cover;
     display: block;
 }
 
@@ -178,11 +169,11 @@
 
 .Body-2-Title {
     display: flex;
-    flex-direction: column; /* sắp xếp dọc */
-    align-items: center; /* căn giữa ngang */
-    justify-content: center; /* căn giữa dọc nếu cần */
-    text-align: center; /* chữ trong h2 vào giữa */
-    margin: 20px auto; /* canh giữa theo chiều ngang */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
 }
 
 .Body-2-Title a {
@@ -194,31 +185,30 @@
     list-style: none;
     display: flex;
     gap: 20px;
-    justify-content: center; /* căn giữa các <li> trong hàng */
-    padding: 0; /* bỏ khoảng trống mặc định */
-    margin: 10px 0; /* tạo khoảng cách trên dưới */
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0;
     font-size: 1.3rem;
 }
 
 .Body-2-Images {
     width: 100%;
     display: flex;
-    justify-content: space-between; /* căn giữa toàn bộ */
-    gap: 28px; /* khoảng cách giữa các card */
-    flex-wrap: wrap; /* ép tất cả nằm 1 hàng */
-    overflow-x: auto; /* thêm nếu muốn cuộn ngang khi màn hình nhỏ */
+    justify-content: space-between;
+    gap: 28px;
+    flex-wrap: wrap;
+    overflow-x: auto;
 }
 
 .Body-2-Images .card {
     width: 430px;
-    border: 1px solid #ddd;
-    overflow: hidden;
     border: none;
+    overflow: hidden;
 }
 
 .Body-2-Images .card img {
     width: 100%;
-    height: 660px; /* cố định chiều cao */
+    height: 660px;
     object-fit: cover;
     margin: 0 auto;
 }
@@ -236,13 +226,12 @@
     padding-bottom: 60px;
 }
 
-/* Mỗi cell có kích thước chuẩn */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 456px); /* 4 cột, mỗi cột 456px */
-    grid-template-rows: repeat(2, 639px); /* 2 hàng, mỗi hàng 639px */
+    grid-template-columns: repeat(4, 456px);
+    grid-template-rows: repeat(2, 639px);
     gap: 12px;
-    width: max-content; /* grid rộng đúng bằng các cột */
+    width: max-content;
     margin: 0 auto;
 }
 
@@ -250,46 +239,17 @@
     border: 2px solid #fff;
 }
 
-/* Đặt vị trí từng item theo layout */
-.item1 {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-/* 456 × 639 */
-.item2 {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-/* 456 × 639 */
-.item3 {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-}
-
-/* 456 × 1278 */
-.item4 {
-    grid-column: 4;
-    grid-row: 1;
-}
-
-/* 456 × 639 */
-.item5 {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-}
-
-/* 912 × 639 */
-.item6 {
-    grid-column: 4;
-    grid-row: 2;
-}
+.item1 { grid-column: 1; grid-row: 1; }
+.item2 { grid-column: 2; grid-row: 1; }
+.item3 { grid-column: 3; grid-row: 1 / span 2; }
+.item4 { grid-column: 4; grid-row: 1; }
+.item5 { grid-column: 1 / span 2; grid-row: 2; }
+.item6 { grid-column: 4; grid-row: 2; }
 
 .item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* Ảnh luôn lấp đầy div */
+    object-fit: cover;
     display: block;
 }
 
@@ -299,26 +259,15 @@
 
 .grid-container-Body-4 {
     display: grid;
-    grid-template-columns: repeat(4 , 455px);
+    grid-template-columns: repeat(4, 455px);
     grid-template-rows: repeat(1, 685px);
     gap: 12px;
 }
 
-.itemBody-4-1 {
-    grid-column: 1;
-}
-
-.itemBody-4-2 {
-    grid-column: 2;
-}
-
-.itemBody-4-3 {
-    grid-column: 3;
-}
-
-.itemBody-4-4 {
-    grid-column: 4;
-}
+.itemBody-4-1 { grid-column: 1; }
+.itemBody-4-2 { grid-column: 2; }
+.itemBody-4-3 { grid-column: 3; }
+.itemBody-4-4 { grid-column: 4; }
 
 .itemBody-4 img {
     width: 455px;
