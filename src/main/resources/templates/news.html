@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tin Tức - Fashion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="/css/MainHome.css">
+</head>
+<body>
+<header th:replace="~{MainHome :: header}"></header>
+
+<!-- Banner Slider (Full màn hình) -->
+<div id="newsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/uploads/banner1.jpg" class="d-block w-100" alt="Banner 1" style="height:100vh; object-fit:cover;">
+        </div>
+        <div class="carousel-item">
+            <img src="/uploads/banner2.jpg" class="d-block w-100" alt="Banner 2" style="height:100vh; object-fit:cover;">
+        </div>
+        <div class="carousel-item">
+            <img src="/uploads/banner3.jpg" class="d-block w-100" alt="Banner 3" style="height:100vh; object-fit:cover;">
+        </div>
+    </div>
+    <!-- Nút điều hướng -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- Nội dung trang Tin tức -->
+<div class="container mt-4">
+    <!-- Breadcrumb -->
+    <div class="d-flex align-items-center mb-4">
+        <a th:href="@{/}" class="text-decoration-none text-muted">TRANG CHỦ</a>
+        <span class="mx-2">/</span>
+        <span>TIN TỨC</span>
+    </div>
+
+
+
+    <!-- Bài viết nổi bật -->
+    <section class="mb-5">
+        <h2 class="h4 mb-4">BÀI VIẾT NỔI BẬT <a th:href="@{/news/featured}" class="small text-muted ms-2">XEM TẤT CẢ</a></h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <img src="/uploads/baiviet.jpg" class="img-fluid mb-3 w-100" alt="Bài viết nổi bật">
+                    <h5 class="mb-2">PANTIO ĐỒNG HÀNH CÙNG CHƯƠNG TRÌNH “ƠN NGHĨA SINH THÀNH 2025”</h5>
+                    <p class="text-muted small">Trong dòng chảy của lịch sử và văn hóa dân tộc, Vu Lan luôn là mùa của hiếu hạnh và tri ân...</p>
+                </a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <img src="/uploads/baiviet.jpg" class="img-fluid mb-3 w-100" alt="Bài viết nổi bật">
+                    <h5 class="mb-2">NEW LOOKBOOK || CITY BREEZE - PANTIO’S JEAN & DENIM 2025</h5>
+                    <p class="text-muted small">Jean & Denim, chất liệu vốn nổi bật bởi cá tính và mạnh mẽ, bước vào mùa Hè với phiên bản mới mềm mại, thoáng hơn...</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bản tin Pantio -->
+    <section class="mb-5">
+        <h2 class="h4 mb-4">BẢN TIN PANTIO <a th:href="@{/news/pantio}" class="small text-muted ms-2">XEM TẤT CẢ</a></h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <img src="/uploads/bantinpantio.png" class="img-fluid mb-3 w-100" alt="Bản tin Pantio">
+                    <h5 class="mb-2">MEGA DEAL | CUỐI THÁNG SĂN DEAL</h5>
+                    <p class="text-muted small">Cuối tháng chính là lúc nàng tự thưởng cho mình những thiết kế thật đẹp từ PANTIO...</p>
+                </a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <img src="/uploads/bantinpantio.png" class="img-fluid mb-3 w-100" alt="Bản tin Pantio">
+                    <h5 class="mb-2">STYLE REWARD | MUA THẢ GA - NHẬN QUÀ LỚN</h5>
+                    <p class="text-muted small">Tháng 9 này, đừng bỏ lỡ đại tiệc ưu đãi từ PANTIO...</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Xu hướng thời trang -->
+    <section class="mb-5">
+        <h2 class="h4 mb-4">XU HƯỚNG THỜI TRANG <a th:href="@{/news/trends}" class="small text-muted ms-2">XEM TẤT CẢ</a></h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <img src="/uploads/xuhuong.jpg" class="img-fluid mb-3 w-100" alt="Xu hướng">
+                    <h5 class="mb-2">ĐI MỘC CHÂU MẶC GÌ ĐẸP? KHÁM PHÁ 10+ OUTFIT</h5>
+                    <p class="text-muted small">Đi Mộc Châu mặc gì để vừa thoải mái, vừa nổi bật giữa thiên nhiên hùng vĩ...</p>
+                </a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <img src="/uploads/xuhuong.jpg" class="img-fluid mb-3 w-100" alt="Xu hướng">
+                    <h5 class="mb-2">ĐI TAM ĐẢO NÊN MẶC GÌ? 10+ OUTFIT SIÊU XINH</h5>
+                    <p class="text-muted small">Đi Tam Đảo nên mặc gì để vừa đẹp, phù hợp khí hậu mà lại check-in cháy máy...</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sự kiện -->
+    <section class="mb-5">
+        <h2 class="h4 mb-4">SỰ KIỆN <a th:href="@{/news/events}" class="small text-muted ms-2">XEM TẤT CẢ</a></h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <img src="/uploads/sukien.jpg" class="img-fluid mb-3 w-100" alt="Sự kiện">
+                    <h5 class="mb-2">🔴 HAPPY WOMEN'S DAY - THÁNG CỦA NÀNG</h5>
+                    <p class="text-muted small">Hòa chung không khí vui tươi mừng ngày Quốc tế Phụ nữ 8/3...</p>
+                </a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <img src="/uploads/sukien.jpg" class="img-fluid mb-3 w-100" alt="Sự kiện">
+                    <h5 class="mb-2">🔴 HAPPY VALENTINE'S DAY</h5>
+                    <p class="text-muted small">Ngày mong chờ nhất trong năm của hàng triệu đôi tình nhân...</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tuyển dụng -->
+    <section class="mb-5">
+        <h2 class="h4 mb-4">TUYỂN DỤNG <a th:href="@{/news/careers}" class="small text-muted ms-2">XEM TẤT CẢ</a></h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <img src="/uploads/tuyendung.png" class="img-fluid mb-3 w-100" alt="Tuyển dụng">
+                    <h5 class="mb-2">TUYỂN DỤNG GIÁM ĐỐC KINH DOANH</h5>
+                    <p class="text-muted small">Chức danh: Giám đốc Kinh doanh - Phòng ban: Kinh doanh...</p>
+                </a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <img src="/uploads/tuyendung.png" class="img-fluid mb-3 w-100" alt="Tuyển dụng">
+                    <h5 class="mb-2">TUYỂN DỤNG TRƯỞNG NHÓM QUẢN TRỊ HÀNG HÓA</h5>
+                    <p class="text-muted small">Vị trí: Trưởng nhóm Quản trị Hàng hóa - Bộ phận: Data & Logistics...</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
