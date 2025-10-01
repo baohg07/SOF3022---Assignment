@@ -1,80 +1,95 @@
 <!DOCTYPE html>
-<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Pantio Header</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/MainHome.css">
+    <title>Đăng ký</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/MainHome.css" rel="stylesheet"> <!-- CSS chung -->
+    <link href="/css/Signup.css" rel="stylesheet">   <!-- CSS riêng cho signup -->
 </head>
 <body>
-<header th:fragment="header">
-    <!-- Phần Header Đỏ -->
-    <div id="header-top">
+
+<!-- Header Top -->
+<div id="header-top">
+    <span><a href="">ĐỊA CHỈ HỆ THỐNG SHOWROOM</a></span>
+</div>
+
+<!-- Header Info -->
+<div id="header-info">
+    <div>
+        <span><a href="https://www.facebook.com/habao.02" target="_blank">Đặt hàng online: 0389 817 057</a></span>
+        <span>-</span>
+        <span><a href="">CSKH: 1900 988 903</a></span>
+    </div>
+    <div>
         <span><a href="">ĐỊA CHỈ HỆ THỐNG SHOWROOM</a></span>
     </div>
+</div>
 
-    <!-- Phần Thông Tin Liên Hệ -->
-    <div id="header-info">
-        <div>
-            <span><a th:href="@{https://www.facebook.com/habao.02}" target="_blank">Đặt hàng online: 0389 817 057</a></span>
-            <span>-</span>
-            <span><a href="">CSKH: 1900 988 903</a></span>
-        </div>
-        <div>
-            <span><a href="">ĐỊA CHỈ HỆ THỐNG SHOWROOM</a></span>
-        </div>
+<!-- Header Menu -->
+<div id="header-menu">
+    <div class="logo">
+        <span><a th:href="@{/}"><strong>FASHION</strong></a></span>
     </div>
-
-    <!-- Phần Menu -->
-    <div id="header-menu">
-        <!-- Tên Thương Hiệu -->
-        <div class="logo">
-            <span><a th:href="@{/}"><strong>FASHION</strong></a></span>
+    <div class="nav">
+        <ul>
+            <li><a th:href="@{/}">Trang Chủ</a></li>
+            <li><a th:href="@{/thoitrangnu}">Thời Trang Nữ</a></li>
+            <li><a href="">Thời Trang Nam</a></li>
+            <li><a href="">Bộ Sưu Tập</a></li>
+            <li><a href="">Tin Tức</a></li>
+            <li><a href="">Sản Phẩm Tốt</a></li>
+        </ul>
+    </div>
+    <div class="actions">
+        <div class="input-group w-auto">
+            <input type="text" class="form-control" size="10" placeholder="Tìm sản phẩm...">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
         </div>
+        <span><a href=""><i class="bi bi-person"></i></a></span>
+        <span>
+            <a href="" class="position-relative">
+                <i class="bi bi-cart"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
+            </a>
+        </span>
+    </div>
+</div>
 
-        <!-- Menu Điều Hướng -->
-        <div class="nav">
-            <ul>
-                <li><a th:href="@{/}">Trang Chủ</a></li>
-                <li><a th:href="@{/thoitrangnu}">Thời Trang Nữ</a></li>
-                <li><a href="">Thời Trang Nam</a></li>
-                <li><a href="">Bộ Sưu Tập</a></li>
-                <li><a href="">Tin Tức</a></li>
-                <li><a href="">Sản Phẩm Tốt</a></li>
-            </ul>
-        </div>
-
-        <!-- Tìm Kiếm / User / Bag -->
-        <div class="actions">
-            <div class="input-group w-auto">
-                <input type="text" class="form-control" size="10" placeholder="Tìm sản phẩm...">
-                <span class="input-group-text">
-                    <i class="bi bi-search"></i>
-                </span>
+<!-- Signup Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-5">Đăng ký tài khoản</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4 shadow-sm">
+                <form method="post" th:action="@{/signup}">
+                    <div class="mb-3">
+                        <label class="form-label">Số điện thoại <span class="text-danger">*</span></label>
+                        <input type="text" name="phone" class="form-control" placeholder="Nhập số điện thoại của bạn" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tạo mật khẩu <span class="text-danger">*</span></label>
+                        <input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nhập lại mật khẩu <span class="text-danger">*</span></label>
+                        <input type="password" name="confirmPassword" class="form-control" placeholder="Nhập lại mật khẩu" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">Đăng ký</button>
+                </form>
+                <div class="text-center mt-3">
+                    <a th:href="@{/login}" class="text-decoration-none">Quay về đăng nhập</a>
+                </div>
             </div>
-
-            <span><a href=""><i class="bi bi-person"></i></a></span>
-            <span>
-                <a th:href="@{/cart}" class="position-relative"><i class="bi bi-cart"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
-                          th:text="${cartItems != null ? cartItems.size() : 0}"></span>
-                </a>
-            </span>
         </div>
     </div>
-</header>
-
-<!-- Banner -->
-<div class="banner">
-    <img src="/uploads/ms_banner_img2.jpg" alt="Banner">
-    <button class="btn-prev"><strong><i class="bi bi-chevron-compact-left"></i></strong></button>
-    <button class="btn-next"><strong><i class="bi bi-chevron-compact-right"></i></strong></button>
 </div>
 
 <!-- Footer -->
 <footer style="background:#fff; padding:40px 0; border-top:1px solid #ddd; font-family:Arial, sans-serif;">
+
     <div style="display:flex; justify-content:space-around; flex-wrap:wrap; text-align:left;">
+
         <!-- Giới thiệu -->
         <div style="flex:1; min-width:250px; margin:10px;">
             <h3 style="margin-bottom:15px;">THỜI TRANG PANTIO</h3>
@@ -127,6 +142,7 @@
                 </button>
             </div>
         </div>
+
     </div>
 
     <div style="text-align:center; margin-top:30px; border-top:1px solid #ddd; padding-top:15px; font-size:14px; color:#555;">
