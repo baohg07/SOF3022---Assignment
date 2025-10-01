@@ -91,6 +91,7 @@
 }
 
 .banner {
+    position: relative;
     width: 100%;
     height: 700px;        /* chiều cao cố định */
     overflow: hidden;
@@ -107,4 +108,27 @@
     width: 100%;
     display: block;
     margin: 0 auto; /* canh giữa ngang */
+}
+
+.banner button {
+    position: absolute;   /* đè lên ảnh */
+    top: 50%;             /* canh giữa theo chiều dọc */
+    transform: translateY(-50%); /* dịch đúng giữa */
+    background: rgba(0,0,0,0.4); /* nền mờ để dễ nhìn */
+    color: white;
+    border: none;
+    width: 45px;
+    height: 80px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.btn-prev {
+    left: 0px;
+    border-radius: 0 20px 20px 0;
+}
+
+.btn-next {
+    right: 0px;
+    border-radius: 20px 0 0 20px;
 }
