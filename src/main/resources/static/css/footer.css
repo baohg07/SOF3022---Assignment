@@ -1,0 +1,103 @@
+.footer {
+    background: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.showroom-btn {
+    background: #800000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.newsletter-form button {
+    background: black;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-section.fanpage img {
+    max-width: 100%;
+    height: auto;
+}
+
+.fanpage-btn button {
+    background: #1877F2;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.footer-section.fanpage .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.footer-section.fanpage .card-img {
+    object-fit: cover;
+    height: 200px;
+}
+
+.footer-section.fanpage .card-img-overlay {
+    padding: 10px;
+}

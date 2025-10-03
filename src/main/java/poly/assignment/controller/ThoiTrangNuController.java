@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class ThoiTrangNuController {
-    // Giao diện chính quần áo nữ
-    @GetMapping("/thoitrangnu")
+    @GetMapping("/fashion/thoitrangnu")
     public String trangNu(Model model) {
         model.addAttribute("title", "Thời Trang Nữ");
-        return "ThoiTrangNu"; // load ThoiTrangNu.html
+        return "ThoiTrangNu";
     }
 }

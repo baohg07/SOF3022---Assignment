@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class AuthController {
 
-    @GetMapping("/login")
+    @GetMapping("/fashion/signin")
     public String loginForm() {
-        return "login"; // trả về login.html
+        return "signin";
     }
-    @GetMapping("/signup")
+    @GetMapping("/fashion/signin/signup")
     public String signupForm() {
-        return "signup"; // trả về signup.html
+        return "signup";
     }
 }

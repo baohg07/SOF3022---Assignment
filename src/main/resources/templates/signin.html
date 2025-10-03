@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Pantio Header</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Đăng nhập</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/MainHome.css">
+    <link href="/css/MainHome.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/signin.css">
 </head>
 <body>
 <header>
@@ -42,16 +43,7 @@
                 <li><a th:href="@{/fashion/thoitrangnu}">Thời Trang Nữ</a></li>
                 <li><a href="#">Thời Trang Nam</a></li>
                 <li><a href="">Bộ Sưu Tập</a></li>
-                <li class="dropdown">
-                    <a th:href="@{/news}">Tin Tức</a>
-                    <div class="dropdown-content">
-                        <a th:href="@{/news/featured}">Bài Viết Nổi Bật</a>
-                        <a th:href="@{/news/pantio}">Bản Tin PANTIO</a>
-                        <a th:href="@{/news/trends}">Xu Hướng Thời Trang</a>
-                        <a th:href="@{/news/events}">Sự Kiện</a>
-                        <a th:href="@{/news/careers}">Tuyển Dụng</a>
-                    </div>
-                </li>
+                <li><a href="">Tin Tức</a></li>
                 <li><a href="">Sản Phẩm Tốt</a></li>
             </ul>
         </div>
@@ -67,7 +59,7 @@
 
             <span><a th:href="@{/fashion/signin}"><i class="bi bi-person"></i></a></span>
             <span>
-                <a th:href="@{/fashion/cart}" class="position-relative"><i class="bi bi-cart"></i>
+                <a href="" class="position-relative"><i class="bi bi-cart"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
                 </a>
             </span>
@@ -75,123 +67,30 @@
     </div>
 </header>
 
-<!--Banner-->
-<div class="banner">
-    <img id="banner-img" src="/uploads/ms_banner_img2.jpg" alt="Banner">
-    <button onclick="prevImages()" id="banner-btn-prev"><strong><i class="bi bi-chevron-compact-left"></i></strong>
-    </button>
-    <button onclick="nextImages()" id="banner-btn-next"><strong><i class="bi bi-chevron-compact-right"></i></strong>
-    </button>
-</div>
-
-<!--Body-1-->
-<div class="Body-1">
-    <!--Body-1 Title-->
-    <div class="Body-1-Title">
-        <h2 class="text-center">
-            BỘ SƯU TẬP <br>
-            <img src="https://theme.hstatic.net/1000392326/1000686717/14/section_line.png?v=7578" alt="">
-        </h2>
-        <span><a href="#">Xem Thêm</a></span>
-    </div>
-    <!--Body-1 Images-->
-    <div class="Body-1-Images">
-        <div>
-            <img src="/uploads/ms_banner_img3.jpg" alt="">
+<div class="Body">
+    <h2 class="text-center">Đăng nhập</h2>
+    <div class="form-login">
+        <div class="item-login-1">
+            <h3>Đăng nhập bằng tài khoản</h3>
+            <span style="color: #333333">Nếu bạn đã có tài khoản, hãy đăng nhập để tích lũy điểm thành viên và nhận được những ưu đãi tốt hơn!</span>
+            <br>
+            <span>Số điện thoại</span>
+            <input type="" class="container" style="width: 300px" placeholder="Nhập số điện thoại ">
+            <span>Mật khẩu</span>
+            <input type="" class="container" style="width: 300px" placeholder="Nhập mật khẩu">
+            <div class="forgot-password">
+                <a class="forgot-password-a" th:href="@{/fashion/signin}">Quên mật khẩu?</a>
+            </div>
+            <a class="btn_signin btn">Đăng nhập</a>
         </div>
-        <div>
-            <img src="/uploads/ms_banner_img4.jpg" alt="">
+        <div class="item-login-2">
+            <h3>Khách hàng mới của Fashion</h3>
+            <span style="color: #333333;">Nếu chưa có tải khoản , hãy đăng ký ngay !</span>
+            <a th:href="@{/fashion/signin/signup}" class="btn_signup btn">Đăng ký</a>
         </div>
     </div>
 </div>
 
-<!--Body-2-->
-<div class="Body-2">
-    <!--Body-2 Title-->
-    <div class="Body-2-Title">
-        <h2 class="text-center">
-            NEW ARRIVAL <br>
-            <img src="https://theme.hstatic.net/1000392326/1000686717/14/section_line.png?v=7578" alt="">
-        </h2>
-        <ul class="gender-tabs">
-            <li><a class="Body-2-Title-Li" onclick="showProducts('nu')">Nữ</a></li>
-            <li><a class="Body-2-Title-Li" onclick="showProducts('nam')">Nam</a></li>
-        </ul>
-        <span><a href="#">Xem Thêm</a></span>
-    </div>
-
-    <!--Body-2 Images-->
-    <div class="Body-2-Images" id="product-list">
-        <!-- JS render ở đây -->
-    </div>
-</div>
-
-<!--Body-3-->
-<div class="Body-3">
-    <!--Body-3 Title-->
-    <div class="Body-3-Title">
-        <h2 class="text-center">
-            DANH MỤC NỔI BẬT <br>
-            <img src="https://theme.hstatic.net/1000392326/1000686717/14/section_line.png?v=7578" alt="">
-        </h2>
-    </div>
-
-    <!-- Body-3 Images -->
-    <div class="grid-container">
-        <div class="item item1">
-            <img src="https://theme.hstatic.net/1000392326/1000686717/14/hmodule_tab_1_img1.png?v=7579" alt="">
-        </div>
-        <div class="item item2">
-            <img src="https://theme.hstatic.net/1000392326/1000686717/14/hmodule_tab_1_img2.png?v=7579" alt="">
-        </div>
-        <div class="item item3">
-            <img src="https://theme.hstatic.net/1000392326/1000686717/14/hmodule_tab_1_img4.png?v=7579" alt="">
-        </div>
-        <div class="item item4">
-            <img src="https://theme.hstatic.net/1000392326/1000686717/14/hmodule_tab_1_img5.png?v=7579" alt="">
-        </div>
-        <div class="item item5">
-            <img src="https://theme.hstatic.net/1000392326/1000686717/14/hmodule_tab_1_img3.png?v=7579" alt="">
-        </div>
-        <div class="item item6">
-            <img src="https://theme.hstatic.net/1000392326/1000686717/14/hmodule_tab_1_img6.png?v=7579" alt="">
-        </div>
-    </div>
-</div>
-
-<div class="Body-4">
-    <!--Body-4 Title-->
-    <div class="Body-4-Title">
-        <h2 class="text-center">
-            ĐĂNG KÝ THEO DÕI KÊNH FACEBOOK FANPAGE <br>
-            <img src="https://theme.hstatic.net/1000392326/1000686717/14/section_line.png?v=7578" alt="">
-        </h2>
-    </div>
-
-    <!--Body-4 Images-->
-    <div class="grid-container-Body-4">
-        <div class="itemBody-4 itemBody-4-1">
-            <a href="https://www.facebook.com/habao.02" target="_blank">
-                <img src="https://theme.hstatic.net/1000392326/1000686717/14/img_ins_1.jpg?v=7579" alt="">
-            </a>
-        </div>
-        <div class="itemBody-4 itemBody-4-2">
-            <a href="https://www.facebook.com/habao.02" target="_blank">
-                <img src="https://theme.hstatic.net/1000392326/1000686717/14/img_ins_2.jpg?v=7579" alt="">
-            </a>
-        </div>
-        <div class="itemBody-4 itemBody-4-3">
-            <a href="https://www.facebook.com/habao.02" target="_blank">
-                <img src="https://theme.hstatic.net/1000392326/1000686717/14/img_ins_3.jpg?v=7579" alt="">
-            </a>
-        </div>
-        <div class="itemBody-4 itemBody-4-4">
-            <a href="https://www.facebook.com/habao.02" target="_blank">
-                <img src="https://theme.hstatic.net/1000392326/1000686717/14/img_ins_4.jpg?v=7579" alt="">
-            </a>
-        </div>
-    </div>
-</div>
 
 <!--footer-->
 <footer class="footer">
@@ -272,6 +171,4 @@
 </footer>
 
 </body>
-<script src="/js/MainHome.js"></script>
 </html>
-
